@@ -1,3 +1,5 @@
+//Student ID: cjw220005
+//Name: Christopher Wiratman
 package InventoryManagement;
 
 /**
@@ -9,6 +11,7 @@ public class AddProductCommand extends Command
 
     public AddProductCommand(ProductCatalog productCatalog, User loggedOnUser)
     {
+        //Calls the parent class(Command) constructor
         super(productCatalog, loggedOnUser);
 
     }
@@ -16,6 +19,10 @@ public class AddProductCommand extends Command
     @Override
     public void Execute() {
         // TODO Add the code that will execute this command
+        //This function will, being from AddProductCommand,
+        //add a product to the product catalog and file
+
+        
 
     }
 }
