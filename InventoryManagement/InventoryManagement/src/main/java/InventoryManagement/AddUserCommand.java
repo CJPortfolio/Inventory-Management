@@ -33,7 +33,8 @@ public class AddUserCommand extends Command
             String userName = scnr.next();
 
             System.out.println("Enter the password:");
-            String password = scnr.next();
+            scnr.nextLine();
+            String password = scnr.nextLine();
 
             System.out.println("Enter true or false if they are a manager or not:");
             String isManager = scnr.next();
@@ -59,6 +60,7 @@ public class AddUserCommand extends Command
                 System.out.println("User successfuly added");
             }
 
+            scnr.close();
             
     }
 }

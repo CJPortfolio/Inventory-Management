@@ -153,7 +153,7 @@ public class Main
 
                 MenuItem menuItem = new MenuItem(command, ++order, commandDescription, isRestricted);
 
-                menuItems.menuList.add(menuItem);
+                MenuList.menuList.add(menuItem);
         
             }
 
@@ -180,7 +180,7 @@ public class Main
             
             try
             {
-                scnr = new Scanner(System.in);
+                //scnr = new Scanner(System.in);
 
                 option = scnr.nextInt() - 1;
                 

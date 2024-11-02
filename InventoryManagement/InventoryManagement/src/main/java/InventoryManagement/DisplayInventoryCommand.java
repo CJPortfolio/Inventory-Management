@@ -15,6 +15,7 @@ public class DisplayInventoryCommand extends Command
     @Override
     public void Execute() {
         // TODO Add the code that will execute this command
+        System.out.println(productCatalog.PrintInventoryList());
 
     }
 }

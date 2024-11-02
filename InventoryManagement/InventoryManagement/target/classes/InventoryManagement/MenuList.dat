@@ -1,4 +1,9 @@
-Add User, true, AddUserCommand 
-Delete User, true, DeleteUserCommand 
-Change Password, false, ChangePasswordCommand 
-Add New Product, true, AddProductCommand 
+Add User, true, AddUserCommand
+Delete User, true, DeleteUserCommand
+Change Password, false, ChangePasswordCommand
+Add New Product, true, AddProductCommand
+Display Inventory, false, DisplayInventoryCommand
+Update Product, true, UpdateProductCommand
+Delete Product, true, DeleteProductCommand
+Add Menu Item, true, AddMenuItemCommand
+Display Product Information, false, DisplayProductInformationCommand

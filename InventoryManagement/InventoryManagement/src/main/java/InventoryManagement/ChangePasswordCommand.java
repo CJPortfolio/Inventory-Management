@@ -41,12 +41,7 @@ public class ChangePasswordCommand extends Command
 
         InventoryManagementSecurity.ChangePassword(userName, currentPassword, newPassword);
 
-
-
-        
-
-        
-
+        scnr.close();
         //This function will replace the old password of the user in the
         //file with the new password.
     }

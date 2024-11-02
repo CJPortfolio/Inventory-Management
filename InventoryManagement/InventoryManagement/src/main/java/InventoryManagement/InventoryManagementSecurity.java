@@ -148,6 +148,8 @@ public class InventoryManagementSecurity
             if((currentLine = reader.readLine()) == null)
             {
                 System.out.println("Empty file, no user to delete");
+                reader.close();
+                writer.close();
                 return;
             }
             
@@ -226,9 +228,27 @@ public class InventoryManagementSecurity
                 BufferedWriter writer = new BufferedWriter(new FileWriter(tempFile));
                 String currentLine;
 
-                if((currentLine = reader.readLine()) == null) return;
+                if((currentLine = reader.readLine()) == null)
+                {
+                    System.out.println("Empty file, no user to delete");
+                    reader.close();
+                    writer.close();
+                    return;
+                }
+            
+                //First line gets written if it doesn't contain current password
+                if(currentLine.contains(GetPasswordHash(currentPassword)))
+                {
+                    writer.write(userToAuthenticate.firstName + ", " + userToAuthenticate.lastName + ", " + username + ", " + GetPasswordHash(newPassword) + ", " + Boolean.toString(userToAuthenticate.isManager));
+                }
 
-                writer.write(currentLine);
+                //Reads second line then writes to the temp file
+                else
+                {
+                    currentLine = reader.readLine();
+                    writer.write(currentLine);
+                }
+
 
                 while((currentLine = reader.readLine()) != null)
                 {

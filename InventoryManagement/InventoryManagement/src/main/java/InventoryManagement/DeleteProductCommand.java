@@ -15,19 +15,28 @@ public class DeleteProductCommand extends Command
 
     }
 
+    //This function will, being from DeleteProductCommand,
+    //delete a product to the product catalog and file
     @Override
     public void Execute() {
         // TODO Add the code that will execute this command
 
         Scanner scnr = new Scanner(System.in);
 
+        //Prompts user for the product name to delete
+        System.out.println("Enter the product name to delete: ");
+        String productToDelete = scnr.nextLine();
 
-        System.out.println("Enter the product to delete: ");
-
-        String productToDelete = scnr.next();
-
-        //This function will, being from DeleteProductCommand,
-        //delete a product to the product catalog and file
+        //Calls the function to remove the product and check it was
+        //deleted
+        if(ProductCatalog.RemoveProduct(productToDelete))
+        {
+            System.out.println("Product succesfuly removed");
+        }
+        else
+        {
+            System.out.println("Product could not be removed");
+        }
 
     }
 }

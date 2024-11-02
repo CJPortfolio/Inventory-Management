@@ -27,7 +27,7 @@ public class AppTest
 
         //Implemenatation of AuthenticateUser function uses already hashed password to
         //as password from user is unknown
-        User AuthenticatedUser = InventoryManagementSecurity.AuthenticateUser(username, password);
+        User AuthenticatedUser = InventoryManagementSecurity.AuthenticateUser(username, InventoryManagementSecurity.GetPasswordHash(password));
 
         assert(AuthenticatedUser != null);
 
@@ -195,7 +195,7 @@ public class AppTest
 
         ProductCatalog productCatalog = new ProductCatalog();
 
-        int productId = 468;
+        int productId = 435;
 
 
         //TODO Check if the Product object is in the file.
