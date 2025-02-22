@@ -289,10 +289,6 @@ public class InventoryManagementSecurity
             }
         }
 
-        
-
-
-        
     }
 
     public static String GetPasswordHash(String password) 
